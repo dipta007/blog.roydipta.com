@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Elements
 permalink: /elements/
 image: '/images/17.jpg'
 ---
@@ -71,6 +70,18 @@ A paragraph looks like this — Globally incubate standards compliant channels b
 
 
 ## Syntax Highlighter
+
+```css
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1c2021;
+}
+```
 
 {% highlight css %}
 body {

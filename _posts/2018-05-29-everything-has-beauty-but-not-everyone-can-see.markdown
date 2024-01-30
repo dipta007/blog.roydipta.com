@@ -3,7 +3,7 @@ layout: post
 title:  Everything has beauty, but not everyone can see
 description: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative a...
 date:   2020-05-29 18:05:55 +0300
-image:  '/images/12.jpg'
+image:  'https://i.imgur.com/QQaPmdt.png'
 tags:   [technology, study]
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace [Luke McKeown](https://unsplash.com/photos/nlyWZtWTzCo) diversity and empowerment.
@@ -14,7 +14,7 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 
 Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
 
-![Beach]({{site.baseurl}}/images/12-1.jpg#wide)
+![Beach](https://i.imgur.com/QQaPmdt.png#wide)
 *Photo by [Luke McKeown](https://unsplash.com/photos/nlyWZtWTzCo) on [Unsplash](https://unsplash.com/)*
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
