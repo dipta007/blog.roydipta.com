@@ -2,7 +2,7 @@
 layout: post  
 title: Clean Code - Naming  
 description: Hello Dirty Coders (including ME, aren't we all? 🤔), welcome to the 1st part of Clean Code Series. This series will be highly inspired...  
-image:   
+image: https://i.imgur.com/Kcumjim.jpg  
 date: 2020-06-16  
 tags: [clean-coding, programming]  
 share: true  
