@@ -16,3 +16,7 @@ group :jekyll_plugins do
     gem "jekyll-paginate"
     gem "jekyll-sitemap"
 end
+
+group :test do
+    gem "html-proofer", "~> 4.4"
+end
