@@ -1,4 +1,9 @@
-<div class="article col col-4 col-d-6 col-t-12">
+
+{% if include.slider %}
+  <div class="article col col-4 col-d-6 col-t-12 slider-item">
+{% else %}
+  <div class="article col col-4 col-d-6 col-t-12">
+{% endif %}
   <div class="article__inner">
 
     <div class="article__head">
@@ -29,7 +34,7 @@
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
 
-      {% if post.description %}
+      {% if post.description and include.slider != 'true' %}
       <p class="article__excerpt">{{ post.description }}</p>
       {% endif %}
 

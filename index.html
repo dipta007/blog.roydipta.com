@@ -1,6 +1,6 @@
 ---
 layout: default
-image: '/images/01.jpg'
+image: '/images/hero.jpeg'
 ---
 
 {% if site.hero.enable %}
@@ -8,6 +8,9 @@ image: '/images/01.jpg'
 {% endif %}
 
 <div class="container">
+  {% include slider-posts.html posts=site.posts title="Featured Posts" %}
+
+  <h1 class="underline">Recent Posts</h1>
   <div class="row animate">
     {% if site.posts.size > 0 %}
       {% for post in paginator.posts %}

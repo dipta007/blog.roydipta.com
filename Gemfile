@@ -15,6 +15,7 @@ gem "jekyll"
 group :jekyll_plugins do
     gem "jekyll-paginate"
     gem "jekyll-sitemap"
+    gem 'jekyll-include-cache'
 end
 
 group :test do

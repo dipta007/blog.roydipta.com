@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col col-12">
+        <div class="slider__head underline">
+            <h1 class="slider__title">{{include.title}}</h1>
+            <span>
+                <span class="slider__arrow disabled" onclick="sliderPrev()">
+                    <i class="ion ion-ios-arrow-round-back"></i>
+                </span>
+                <span class="slider__arrow" onclick="sliderNext()">
+                    <i class="ion ion-ios-arrow-round-forward"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row animate slider">
+    <div class="slider-items">
+        {% for post in include.posts %}
+        {%if post.featured == true %}
+        {% include article.html slider="true" %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    const slider = document.querySelector('.slider-items');
+    const leftArrow = document.querySelectorAll('.slider__arrow')[0];
+    const rightArrow = document.querySelectorAll('.slider__arrow')[1];
+
+    const end = () => {
+        isDown = false;
+        slider.classList.remove('active');
+    }
+
+    const start = (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    }
+
+    const move = (e) => {
+        if (!isDown) return;
+
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+        const dist = (x - startX);
+        slider.scrollLeft = scrollLeft - dist;
+    }
+
+    (() => {
+        slider.addEventListener('mousedown', start);
+        slider.addEventListener('touchstart', start);
+
+        slider.addEventListener('mousemove', move);
+        slider.addEventListener('touchmove', move);
+
+        slider.addEventListener('mouseleave', end);
+        slider.addEventListener('mouseup', end);
+        slider.addEventListener('touchend', end);
+    })();
+
+
+    const sliderNext = () => {
+        leftArrow.classList.remove('disabled');
+
+        const width = slider.scrollWidth - slider.offsetWidth;
+        slider.scrollLeft += 200;
+
+        if (slider.scrollLeft >= width) {
+            rightArrow.classList.add('disabled');
+            return;
+        }
+    }
+
+    const sliderPrev = () => {
+        rightArrow.classList.remove('disabled');
+
+        slider.scrollLeft -= 200;
+
+        if (slider.scrollLeft <= 0) {
+            leftArrow.classList.add('disabled');
+            return;
+        }
+    }
+</script>
