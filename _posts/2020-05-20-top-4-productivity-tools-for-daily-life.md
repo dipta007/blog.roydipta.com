@@ -65,7 +65,7 @@ Besides, there are many other custom calendars you can integrate with Google Cal
 #### Pricing  
 Google Calendar is totally free to use.  
   
-## 4. [Google Drive](Google Drive) + Dropbox  
+## 4. Google Drive + Dropbox  
 Once upon a time, we were totally dependent on our physical storage. But now is a time of cloud storage. We can find a few people who are not using cloud storage like Google Drive or Dropbox or Mega. The main benefit of using cloud storage is that they are synced on all of your devices. And they all have a mobile app, so that you can access your files from your Mobile Phone at the same time. Between Dropbox and Google Drive, I prefer Google Drive for its cheaper price and the integration with [Google Colab](https://colab.research.google.com/). Most of my files are synced on Google Drive. But I must warn you, Google Drive is really super slow in terms of synching. Dropbox, on the other hand, is super fast as they use [Incremental Backup](https://experience.dropbox.com/resources/incremental-backup). Dropbox gives some cool features too like smart sync - so that it won't take all of your physical storage. You can also configure it on Google Drive that. But the difference is that on Dropbox, you can see the file, but when you want to use it, it will download the file from their cloud. On their own term, it is called [Smart Sync](https://www.dropbox.com/features/sync). If you want my suggestion, use the free version of Dropbox and use it for your most necessary files and use Google Drive for your big size files, which you don't need always and also as data storage to train models on Colab.  
   
 #### Pricing  
