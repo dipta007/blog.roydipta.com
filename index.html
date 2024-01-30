@@ -3,7 +3,9 @@ layout: default
 image: '/images/01.jpg'
 ---
 
-{% include hero.html %}
+{% if site.hero.enable %}
+  {% include hero.html %}
+{% endif %}
 
 <div class="container">
   <div class="row animate">
