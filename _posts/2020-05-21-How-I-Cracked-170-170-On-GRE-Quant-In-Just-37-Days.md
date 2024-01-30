@@ -1,25 +1,27 @@
----
-layout: post
-title: How I Cracked 170/170 On GRE Quant In Just 37 Days  
-description: Learn & Crack 170 in just 37 days...
-date: 2020-05-21  
-image:  'https://i.imgur.com/QQaPmdt.png'
+---  
+layout: post  
+title: How I cracked 170/170 on GRE Quant in just 37 days  
+description: Learn & Crack 170 in just 37 days...  
+image: https://i.imgur.com/QQaPmdt.png  
+date: 2020-04-21  
 tags: [higher-study, gre]  
----
+share: true  
+---  
   
 Don't be fooled by the title. I am preparing for mathematics from Class 1. It was a **clickbait** and you fall for it 🤣. So don't go away. Just follow along, maybe you will find something useful.  
   
 If you are here to hear that 170 out of 170 in GRE Quant is easy, it's not. Sorry to disappoint you. But there is another catch - how much difficult it is, totally depends on your previous foundation. For me, as I am a student of Computer Science and had some mathematical sense from my 5+ years of competitive programming, it was not that much hard (Show off 🤣). But I will try to write this blog from a neutral position, which will help everyone to secure a 90th percentile score (167+) on GRE Quant. And this blog will all about Quant. If you have any questions about Verbal or AWA, please let me know in the comments.  
   
-Before that, my GRE Score: Verbal - 154 🙃, Quant - 170 ☺️, AWA - 4.5 😇  
+Before that, my GRE Score: **Verbal - 154 🙃, Quant - 170 ☺️, AWA - 4.5 😇**  
   
 ## Preparation Time  
 I didn't get much time to prepare as I was preparing for Canada Fall-2020. But at the last moment, I realized that USA would be the best bet for me with my current profile. So I kind of started preparing for GRE on November 3 and sat for GRE on December 10. Before that, I went to a coaching center named [GREC](https://hsa.grecbd.com/) but that time I was not 100% sure about giving GRE. So it was just going to classes and collecting notes.  
   
 Whatever it is, at first register for the GRE test. Otherwise, you won't feel enough push to prepare. I will suggest taking at least 2-3 months. More than this will slow you down, less than this will burn you out.  
-
+  
 ## How to Practice  
 There is only one key to get a good score on Quant and that is **Solving & Solving**. But it also matters how do you practice. If you just open Manhattan 5lb and solve it at a stretch, it won't help you that much. It will obviously improve your analytical and mathematical skill, but there are other great ways to prepare for GRE. Here are some tips on how to solve -  
+  
 - Always solve problems in a time constraint (I recommend 20 problems in 30 minutes)  
 - Always maintain an *Error Log* like this [one](https://www.notion.so/dipta007/GRE-Error-Log-353536602c224b599f91c21c243cd37e) or maybe on a physical notebook  
 - Go through the *Error Log* every now and then  
@@ -31,9 +33,10 @@ There is only one key to get a good score on Quant and that is **Solving & Solvi
 - Never Solve problems just from a topic, mix all of them and then solve  
 - Try to solve problems from pdf or computer screen, that will help you in the exam time from screen fatigue  
 - If you have completed all and you still have time, go for the ones that you really did bad previously  
-
+  
 ## What to Practice  
 Here I will share the materials that I had solved and in the same order. But remember that if you are not good at any topic, first go through the theory.  
+  
 - I have gone through all the theory videos of Quant on [**Magoosh Premium**](https://gre.magoosh.com/). Just don't sit and watch all the videos. Make sure to take notes. The small to smallest tricks will help you on the exam day. Remember, in the GRE Level of difficulty is not the challenge, Time is the main challenge.  
 - I started my practice from **Magoosh**. I used the Custom Practice session from the top navbar. And used these settings to solve 20 problems in 30 minutes.  
   
@@ -60,9 +63,4 @@ Here I will share the materials that I had solved and in the same order. But rem
 4. [Greg Mat Youtube channel](https://www.youtube.com/channel/UCktwzce9ncy_K78l1KBZkYQ)  
 5. [Galvanize Youtube channel](https://www.youtube.com/channel/UCZKEgQZV2L9wEGuhuuXaNkQ)  
   
-  
-[How-I-Cracked-170-170-On-GRE Quant-In-Just-37-Days > Some Other Resources]({% link _posts/2020-05-21-How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days.md %}#what-to-practice)  
-  
-[How-I-Cracked-170-170-On-GRE Quant-In-Just-37-Days]({% link _posts/2020-05-21-How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days.md %})  
-
-{% include newsletter.html %}  
+{% include newsletter.html %}
