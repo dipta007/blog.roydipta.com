@@ -6,6 +6,7 @@ image: https://i.imgur.com/Kcumjim.jpg
 date: 2020-06-16  
 tags: [clean-coding, programming]  
 share: true  
+featured: true  
 ---  
   
 Hello Dirty Coders (including ME, aren't we all? 🤔), welcome to the 1st part of Clean Code Series. This series will be highly inspired by and sometimes embarrassingly copied from the [**Clean Code**](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_2?dchild=1&amp;keywords=clean+code&amp;qid=1592311719&amp;sr=8-2) book by **Uncle Bob** (Robert C. Martin). I highly recommend reading the book. This series is nowhere near to the original book.  

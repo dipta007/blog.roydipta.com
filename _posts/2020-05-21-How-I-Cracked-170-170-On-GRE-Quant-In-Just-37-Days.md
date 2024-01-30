@@ -6,6 +6,7 @@ image: https://i.imgur.com/QQaPmdt.png
 date: 2020-04-21  
 tags: [higher-study, gre]  
 share: true  
+featured: true  
 ---  
   
 Don't be fooled by the title. I am preparing for mathematics from Class 1. It was a **clickbait** and you fall for it 🤣. So don't go away. Just follow along, maybe you will find something useful.  
