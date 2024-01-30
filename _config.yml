@@ -33,7 +33,7 @@ hero:
   enable: true 
   hero__title: Hey, I’m Shubhashis Roy Dipta
   hero__description: I write about Machine Learning, NLP, Vision, Multimodal AI
-  hero__image: '/images/hero.jpg'
+  hero__image: '/images/hero.jpeg'
 
 
 #-------------------------------
