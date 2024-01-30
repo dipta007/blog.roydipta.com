@@ -1,0 +1,24 @@
+<!-- begin comments -->
+<div class="show-comments" id="show-comments">
+  <button class="button disqus-button" id="show-comments-button" onclick="showComments(); return false;">Show Comments</button>
+</div>
+
+<div id="comments" class="post__comments" style="display: none;">
+</div>
+
+<script>
+  var comment_container = document.getElementById("comments");
+  function showComments() {
+    document.getElementById("show-comments").style.display = "none";
+    document.getElementById("comments").style.display = "block";
+    // Show disqus comments
+    comment_container.classList.add("is-open");
+  }
+</script>
+<!-- end comments -->
+
+<!--  The comments switcher -->
+{% if site.comments.active %}
+  {% capture path %}comments/{{ site.comments.active }}.html{% endcapture %}
+  {% include {{ path }} %}
+{% endif %}

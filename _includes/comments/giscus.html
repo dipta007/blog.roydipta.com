@@ -1,0 +1,56 @@
+<!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'noborder_light';
+    const darkTheme = 'noborder_dark';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    var htmlEle = document.querySelector('html')
+    if (htmlEle.classList.contains('dark-mode')) {
+      initTheme = darkTheme;
+    }
+
+    console.log('initTheme: ' + initTheme)
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': '{{ site.comments.giscus.repo}}',
+      'data-repo-id': '{{ site.comments.giscus.repo_id }}',
+      'data-category': '{{ site.comments.giscus.category }}',
+      'data-category-id': '{{ site.comments.giscus.category_id }}',
+      'data-mapping': '{{ site.comments.giscus.mapping | default: 'pathname' }}',
+      'data-reactions-enabled': '{{ site.comments.giscus.reactions_enabled | default: '1' }}',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': '{{ site.comments.giscus.input_position | default: 'bottom' }}',
+      'data-lang': '{{ site.comments.giscus.lang | default: lang }}',
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('comments').appendChild(giscusScript);
+
+    
+    document.querySelector(".toggle-theme").addEventListener("click", function () {
+      const theme = document.querySelector('html').classList.contains('dark-mode') ? lightTheme : darkTheme;
+
+      const message = {
+        setConfig: {
+          theme: theme
+        }
+      };
+
+      const giscus = document.querySelector(iframe).contentWindow;
+      giscus.postMessage({ giscus: message }, origin);
+    });
+  })();
+</script>
