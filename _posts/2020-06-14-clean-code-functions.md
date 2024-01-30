@@ -8,7 +8,7 @@ tags: [clean-coding, programming]
 share: true  
 ---  
   
-[here]({% link _posts/2020-06-16-clean-code-naming.md %}). So let's jump in and learn to code clean functions 🙏  
+Hello coders, so today, you want to learn something that will help you and your colleagues. It is the second part of a long series. You can find the first part [here]({% link _posts/2020-06-16-clean-code-naming.md %}). So let's jump in and learn to code clean functions 🙏  
   
 ### Small  
 The first rule of the function is that they should be small. How small should they be? There is no hard and fast number for this. But as [Uncle Bob](https://en.wikipedia.org/wiki/Robert_C._Martin) suggests, it should hardly ever be 20 lines long.  

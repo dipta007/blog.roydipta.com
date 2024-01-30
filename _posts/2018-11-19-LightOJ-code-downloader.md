@@ -8,7 +8,7 @@ tags: [competitive-programming, programming, lightoj]
 share: true  
 ---  
   
-[here]({% link _posts/2018-11-18-SPOJ-code-downloader.md %}). Today I have developed another script to download all of your accepted solutions from **LightOJ**. It will download all of yours accepted solutions using crawling. The features of the script are —  
+Hey guys, *whats up?* Previously I came up with ***SPOJ code downloader***. You can checkout the post [here]({% link _posts/2018-11-18-SPOJ-code-downloader.md %}). Today I have developed another script to download all of your accepted solutions from **LightOJ**. It will download all of yours accepted solutions using crawling. The features of the script are —  
   
 1. Download all of your accepted codes on LightOJ.  
 2. If there are multiple submission for a single problem, then it downloads all.  
