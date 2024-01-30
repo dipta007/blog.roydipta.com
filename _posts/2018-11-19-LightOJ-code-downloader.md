@@ -1,7 +1,7 @@
 ---  
 layout: post  
 title: LightOJ Code Downloader  
-description: Download all codes by one code...  
+description: Download all codes in one click...  
 image: https://i.imgur.com/GTgpe1G.jpg  
 date: 2018-11-19  
 tags: [competitive-programming, programming, lightoj]  
