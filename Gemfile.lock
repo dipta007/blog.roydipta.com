@@ -92,6 +92,8 @@ PLATFORMS
   x86_64-linux-android
 
 DEPENDENCIES
+  bundler
+  jekyll
   jekyll-feed
   jekyll-include-cache
   jekyll-paginate
@@ -100,4 +102,4 @@ DEPENDENCIES
   rouge
 
 BUNDLED WITH
-   2.1.4
+   2.5.5
