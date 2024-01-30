@@ -50,6 +50,15 @@
   p:has(> img) {
     text-align: center;
   }
+
+  a {
+    color: var(--brand-color);
+
+    &:hover {
+      color: var(--button-background-hover);
+    }
+  }
+
 }
 
 .page-image {

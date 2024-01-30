@@ -2,6 +2,10 @@
   Syntax Highlighting
 */
 
+.highlighter-rouge {
+  background: var(--syntax-highlighting-background);
+}
+
 .highlight {
   margin-bottom: 32px;
   background: var(--syntax-highlighting-background);

@@ -29,7 +29,7 @@
               <!-- Pages -->
               {% assign pages_list = site.pages | sort: "order" %}
               {% for page in pages_list %}
-                {% unless page.name == 'tags.html' or page.name == '404.html' %}
+                {% unless page.name == '404.html' %}
                   {% if page.title %}
                   <li class="nav__item">
                     {% if page.external_url %}
