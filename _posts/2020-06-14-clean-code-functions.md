@@ -6,6 +6,7 @@ image: https://i.imgur.com/KyMggLl.jpg
 date: 2020-06-14  
 tags: [clean-coding, programming]  
 share: true  
+featured: true  
 ---  
   
 Hello coders, so today, you want to learn something that will help you and your colleagues. It is the second part of a long series. You can find the first part [here]({% link _posts/2020-06-16-clean-code-naming.md %}). So let's jump in and learn to code clean functions 🙏  
