@@ -41,6 +41,8 @@
         slider.classList.add('active');
         startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
+
+        checkDisabled();
     }
 
     const move = (e) => {
@@ -50,6 +52,8 @@
         const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
         const dist = (x - startX);
         slider.scrollLeft = scrollLeft - dist;
+
+        checkDisabled();
     }
 
     (() => {
@@ -64,27 +68,25 @@
         slider.addEventListener('touchend', end);
     })();
 
-
-    const sliderNext = () => {
+    const checkDisabled = () => {
         leftArrow.classList.remove('disabled');
-
-        const width = slider.scrollWidth - slider.offsetWidth;
-        slider.scrollLeft += 200;
-
-        if (slider.scrollLeft >= width) {
+        rightArrow.classList.remove('disabled');
+        if (slider.scrollLeft <= 0) {
+            leftArrow.classList.add('disabled');
+        }
+        if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
             rightArrow.classList.add('disabled');
-            return;
         }
     }
 
+
+    const sliderNext = () => {
+        slider.scrollLeft += 200;
+        checkDisabled();
+    }
+
     const sliderPrev = () => {
-        rightArrow.classList.remove('disabled');
-
         slider.scrollLeft -= 200;
-
-        if (slider.scrollLeft <= 0) {
-            leftArrow.classList.add('disabled');
-            return;
-        }
+        checkDisabled();
     }
 </script>

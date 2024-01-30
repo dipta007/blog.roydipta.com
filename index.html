@@ -7,10 +7,12 @@ image: '/images/hero.jpeg'
   {% include hero.html %}
 {% endif %}
 
-<div class="container">
+<div class="wide-container">
   {% include slider-posts.html posts=site.posts title="Featured Posts" %}
+</div>
 
-  <h1 class="underline">Recent Posts</h1>
+<div class="container">
+  <h1 class="underline" id="recent_posts">Recent Posts</h1>
   <div class="row animate">
     {% if site.posts.size > 0 %}
       {% for post in paginator.posts %}
@@ -23,3 +25,13 @@ image: '/images/hero.jpeg'
 {% include pagination.html %}
 
 {% include section-tags.html %}
+
+<script>
+window.onload = function() {
+  const url = window.location.href;
+  console.log(url);
+  if (url.includes("/page/")) {
+    document.getElementById("recent_posts").scrollIntoView(behavior="smooth");
+  }
+}
+</script>

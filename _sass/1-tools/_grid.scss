@@ -9,6 +9,12 @@ $mobile:  576px;
 
 $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
+.wide-container {
+  max-width: 100%;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
 .container {
   max-width: $container-base-width;
   padding-left: $container-offset;
