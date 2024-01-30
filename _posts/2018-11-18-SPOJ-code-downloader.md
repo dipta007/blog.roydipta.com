@@ -23,7 +23,3 @@ You can find the script in this [link](https://github.com/dipta007/spoj-code-dow
 I have also developed another script to download Codeforces code, but recently found some bugs in it. I will repost after solving the bugs.  
   
 If you find any bugs or problems regarding the script or want new features, just comment here or open an issue on [Github](https://github.com/dipta007/spoj-code-downloader/issues). I will try to response as soon as possible.  
-      
-  
-[LightOJ-code-downloader]({% link _posts/2018-11-19-LightOJ-code-downloader.md %})  
-[How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days > How to Practice]({% link _posts/2020-05-21-How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days.md %}#how-to-practice)
