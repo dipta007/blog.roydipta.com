@@ -11,9 +11,10 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 #-------------------------------
 # Author Settings
 author:
-  author__name: Shubhashis Roy Dipta
-  author__bio: A PhD student at the University of Maryland, Baltimore County, USA. I am working on Machine Learning, NLP, Vision, Multimodal AI.
-  author__avatar: '/images/avatar.jpg'
+  name: Shubhashis Roy Dipta
+  bio: A PhD student at the University of Maryland, Baltimore County, USA. I am working on Machine Learning, NLP, Vision, Multimodal AI.
+  avatar: '/images/avatar.jpg'
+  url: https://roydipta.com/?utm_source=blog.roydipta.com&utm_medium=header
 
 social:
 - {icon: "ion-logo-linkedin", link: "https://linkedin.com/in/iamdipta007"}
