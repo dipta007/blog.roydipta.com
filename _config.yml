@@ -36,6 +36,8 @@ hero:
   hero__title: Hey, I’m Shubhashis Roy Dipta
   hero__description: I write about Machine Learning, NLP, Vision, Multimodal AI
   hero__image: '/images/hero.jpeg'
+featured_posts: true # Number of featured posts to show on the home page
+trending_tags: 4 # Number of trending tags to show on the home page
 
 
 #-------------------------------

@@ -8,8 +8,12 @@ image: '/images/hero.jpeg'
 {% endif %}
 
 <div class="wide-container">
-  {% include slider-posts.html posts=site.posts title="Featured Posts" %}
+  {% if site.featured_posts %}
+    {% include slider-posts.html posts=site.posts title="Featured Posts" %}
+  {% endif %}
+
 </div>
+
 
 <div class="container" style="margin-top: 2em;">
   <h1 class="underline" id="recent-posts">Recent Posts</h1>
