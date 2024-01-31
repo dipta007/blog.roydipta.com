@@ -35,29 +35,29 @@ h6 {
   color: var(--heading-font-color);
 }
 
-h1 {
-  font-size: $font-size-h1;
-}
+// h1 {
+//   font-size: $font-size-h1;
+// }
 
-h2 {
-  font-size: $font-size-h2;
-}
+// h2 {
+//   font-size: $font-size-h2;
+// }
 
-h3 {
-  font-size: $font-size-h3;
-}
+// h3 {
+//   font-size: $font-size-h3;
+// }
 
-h4 {
-  font-size: $font-size-h4;
-}
+// h4 {
+//   font-size: $font-size-h4;
+// }
 
-h5 {
-  font-size: $font-size-h5;
-}
+// h5 {
+//   font-size: $font-size-h5;
+// }
 
-h6 {
-  font-size: $font-size-h6;
-}
+// h6 {
+//   font-size: $font-size-h6;
+// }
 
 blockquote {
   position: relative;
@@ -140,10 +140,15 @@ a {
   text-decoration: none;
   color: var(--link-color);
   transition: $global-transition;
+  word-wrap: break-word;
 
   &:hover {
     color: var(--link-color-hover);
   }
+}
+
+code {
+  word-wrap: break-word;
 }
 
 hr {

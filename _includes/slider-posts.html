@@ -38,7 +38,6 @@
     }
 
     const start = (e) => {
-        e.preventDefault();
         drag = 0;
 
         isDown = true;
@@ -73,7 +72,6 @@
         slider.addEventListener('touchend', end);
 
         slider.addEventListener('click', (e) => {
-            console.log("click", drag);
             if (drag > 4) {
                 e.preventDefault();
                 return;
