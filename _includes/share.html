@@ -1,0 +1,47 @@
+<div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Twitter" rel="nofollow" target="_blank"><i class="ion ion-logo-twitter"></i></a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Facebook" rel="nofollow" target="_blank"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+
+    </ul>
+    {% if site.comments.active %}
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+            <a onclick="scrollToComments()">
+                <small>Comment</small>
+            </a>
+        </li>
+    </ul>
+    {% endif %}
+</div>
+
+<script>
+    const scrollToComments = () => {
+        let comment_container = document.getElementById("comments");
+        if (comment_container.style.display === "none") {
+            comment_container = document.getElementById("show-comments");
+        }
+
+        comment_container.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
