@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: SPOJ Code Downloader  
 description: Those who have done or doing competitive programming, is somehow familiar with SPOJ online judge...  

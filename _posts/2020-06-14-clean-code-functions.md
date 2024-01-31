@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: Clean Code - Functions  
 description: Clean functions are the first line of organization in any program...  

@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: Clean Code - Naming  
 description: Hello Dirty Coders (including ME, aren't we all? 🤔), welcome to the 1st part of Clean Code Series. This series will be highly inspired...  
