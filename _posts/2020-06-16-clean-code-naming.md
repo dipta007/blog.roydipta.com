@@ -93,7 +93,7 @@ Avoid using common words like `sum`, `temp`, `flag`, as they seem to be used by 
   
 Avoid using encodings like **Hungarian Notation** or **Member Prefixes**. They were used before when the IDE was not as smart as it is now. Current IDEs are smarter enough to give us suggestions about the type or the member variable of a class. We don't want to clutter our brains with some more information.  
   
-On the other hand, language-specific encodings should be maintained throughout the project. Like [snake_case](snake_case) in python and [camelCase](camelCase) in javascript.  
+On the other hand, language-specific encodings should be maintained throughout the project. Like [snake_case](https://en.wikipedia.org/wiki/Snake_case) in python and [camelCase](https://en.wikipedia.org/wiki/Camel_case) in javascript.  
   
 ### Avoid Mental Mapping  
   
