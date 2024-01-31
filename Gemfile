@@ -22,6 +22,3 @@ end
 group :test do
     gem "html-proofer", "~> 4.4"
 end
-
-# TODEL condition; it was added as a workaround for https://github.com/actions/jekyll-build-pages/issues/104
-gem 'faraday-retry', '~> 2.2.0' if ENV["GITHUB_ACTIONS"] != "true"
