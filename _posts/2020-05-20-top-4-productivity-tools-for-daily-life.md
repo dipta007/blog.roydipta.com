@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: Top 4 Productivity Tools For Daily Life  
 description: We use different productive tools in our day to day life. I mostly spend my daily life coding/typing on my...  
