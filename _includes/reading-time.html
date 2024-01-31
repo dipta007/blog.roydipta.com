@@ -1,0 +1,10 @@
+<p class="reading-time" style="{{ include.style | default: '' }}">
+    <i class="ion ion-md-time"></i>
+
+    {% assign words = include.content | number_of_words %}
+    {% if words < 360 %} 
+        1 min to read 
+    {% else %} 
+        {{ words | divided_by:180 }} mins to read 
+    {% endif %}
+</p>

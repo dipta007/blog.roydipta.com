@@ -34,8 +34,12 @@
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
 
+      {% include reading-time.html content=post.content %}
+
       {% if post.description and include.slider != 'true' %}
-      <p class="article__excerpt">{{ post.description }}</p>
+      <p class="article__excerpt">
+        <i class="ion ion-md-text"></i>
+        {{ post.description }}</p>
       {% endif %}
 
     </div>

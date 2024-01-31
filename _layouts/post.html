@@ -41,23 +41,27 @@ layout: default
 
           <h1 class="post__title">{{ page.title | escape }}</h1>
 
-          <div class="post__meta">
-            <a href="{{site.author.url}}" target="_blank" class="post__author-image">
-              <img class="lazy" data-src="{{site.author.avatar}}" alt="{{site.author.name}}">
-            </a>
 
-            <div class="post__meta-bottom">
-              <a class="post__author" href="{{site.author.url}}" target="_blank">{{site.author.name}}</a>
-              <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string
-                }}</time>
+          <div class="post__meta_container">
+            <div class="post__meta">
+              <a href="{{site.author.url}}" target="_blank" class="post__author-image">
+                <img class="lazy" data-src="{{site.author.avatar}}" alt="{{site.author.name}}">
+              </a>
+
+              <div class="post__meta-bottom">
+                <a class="post__author" href="{{site.author.url}}" target="_blank">{{site.author.name}}</a>
+                <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string
+                  }}</time>
+              </div>
             </div>
+            
+            {% include reading-time.html content=content style="margin-bottom: 10px; font-size: 1em;" %}
           </div>
 
           <div id="focus-container" style="display: none;">
             <input type="checkbox" id="focus-toggle" onchange="toggleFocusMode()">
             <span class="text">Focus Mode</span>
           </div>
-
         </div>
       </div>
     </div>
@@ -131,10 +135,10 @@ layout: default
 
 <!-- Begin Progress Bar -->
 {% if site.progressbar %}
-  <!-- Scrolling Progress Bar -->
-  <progress id="progress" value="0">
-    <div class="progress-container">
-      <span class="progress-bar"></span>
-    </div>
-  </progress>
+<!-- Scrolling Progress Bar -->
+<progress id="progress" value="0">
+  <div class="progress-container">
+    <span class="progress-bar"></span>
+  </div>
+</progress>
 {%- endif %}

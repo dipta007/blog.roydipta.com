@@ -130,11 +130,14 @@
     }
 }
 
-@media (max-width: $global-toc-break) {
+@media screen and (max-width: $global-toc-break) {
     .share {
         display: none;
     }
     #toc-wrapper {
+        display: none;
+    }
+    .sidebar-left {
         display: none;
     }
 }

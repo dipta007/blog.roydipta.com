@@ -156,8 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Focus Mode show or not
   ======================= */
   const leftSidebars = document.querySelectorAll(".sidebar-left");
-  console.log(leftSidebars.length);
-  if (leftSidebars.length > 0) {
-    document.getElementById("focus-container").style.display = "block";
+  if (leftSidebars.length > 0 && window.getComputedStyle(leftSidebars[0]).display !== 'none') {
+    document.getElementById("focus-container").style.display = "";
   }
 });
