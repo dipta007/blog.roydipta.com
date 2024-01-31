@@ -6,6 +6,7 @@ description: A blog on Machine Learning, NLP, Vision, Multimodal AI
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dipta007.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+toc: true # Table of Contents
 
 
 #-------------------------------

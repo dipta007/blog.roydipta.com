@@ -1,0 +1,139 @@
+.share {
+    text-align: center;
+    p {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    ul {
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            display: inline-block;
+            margin-bottom: 9px;
+
+            i.fa {
+                border: 1px solid #ddd;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .sep {
+        height: 1px;
+        width: 20px;
+        background: #999;
+        margin: 0px auto;
+        margin-bottom: 1.2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .share {
+        margin-top: 30px;
+    }
+}
+
+.share,
+.share a {
+    color: var(--link-color);
+    fill: var(--link-color);
+}
+
+.sticky-top-offset {
+    top: 2em;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1020;
+}
+
+#toc-wrapper {
+    .header {
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+        padding-left: 1.25rem;
+        margin-bottom: 0.7rem;
+    }
+    max-width: 100%;
+    border-left: 1px solid rgba(158, 158, 158, 0.17);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    transition: top 0.2s ease-in-out;
+    -webkit-animation: fade-up 0.8s;
+    animation: fade-up 0.8s;
+    
+    ul {
+        list-style: none;
+        font-size: 0.85rem;
+        line-height: 1.25;
+        padding-left: 0;
+        text-align: left;
+        
+        li {
+            &:not(:last-child) {
+                margin: 0.4rem 0;
+            }
+            
+            a {
+                padding: 0.2rem 0 0.2rem 1.25rem;
+            }
+        }
+        
+        /* Overwrite TOC plugin style */
+        
+        .toc-link {
+            display: block;
+            white-space: nowrap;
+            overflow: clip;
+            text-overflow: ellipsis;
+            
+            &:hover {
+                color: var(--toc-highlight);
+                text-decoration: none;
+            }
+            
+            &::before {
+                display: none;
+            }
+        }
+        
+        .is-active-link {
+            color: var(--toc-highlight) !important;
+            // font-weight: 600;
+            
+            &::before {
+                display: inline-block;
+                width: 1px;
+                left: -1px;
+                height: 1.25rem;
+                background-color: var(--toc-highlight) !important;
+            }
+        }
+        
+        ul {
+            padding-left: 0.75rem;
+        }
+    }
+}
+
+@media (max-width: $global-toc-break) {
+    .share {
+        display: none;
+    }
+    #toc-wrapper {
+        display: none;
+    }
+}

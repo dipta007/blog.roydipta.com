@@ -19,6 +19,22 @@
 
   {% include footer.html %}
 
+  {% if page.toc and site.toc %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
+
+    <script>
+      tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: '.post__content',
+        ignoreSelector: '[data-toc-skip]',
+        headingSelector: 'h2, h3',
+        orderedList: false,
+        scrollSmooth: true
+      });
+    </script>
+  {% endif %}
+
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
   <script src="{{ site.baseurl }}/js/common.js"></script>
 </body>

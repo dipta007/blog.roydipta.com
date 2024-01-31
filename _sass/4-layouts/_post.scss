@@ -66,19 +66,19 @@
   h1 {
     color: #CC0001;
   }
-  
+
   h2 {
     color: #e69138;
   }
-  
+
   h3 {
     color: #f1c232;
   }
-  
+
   h4 {
     color: #6aa84f;
   }
-  
+
   h5 {
     color: #3d85c6;
   }
@@ -154,7 +154,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  
+
   .post__tag {
     padding: 12px 16px;
     margin: 4px 8px 4px 0;
@@ -167,7 +167,7 @@
     color: var(--heading-font-color);
     transition: none;
     background-color: var(--background-alt-color);
-  
+
     &:last-child {
       margin-right: 0;
     }
@@ -264,7 +264,8 @@
     }
   }
 
-  img, .js-reframe {
+  img,
+  .js-reframe {
     border-radius: 8px;
     overflow: hidden;
 
@@ -350,7 +351,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-     margin-top: 60px;
+    margin-top: 60px;
 
     .row .col:last-child {
       margin-bottom: 0;
@@ -392,9 +393,9 @@
   }
 
   @media only screen and (max-width: $mobile) {
-     &.is-open {
-       margin: 0 auto;
-     }
+    &.is-open {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -412,7 +413,7 @@
     margin-bottom: 0;
     color: var(--text-alt-color);
   }
-  
+
   @media only screen and (max-width: $mobile) {
     .error__title {
       font-size: 68px;
@@ -425,10 +426,58 @@
   margin-top: 80px;
 
   @media only screen and (max-width: $mobile) {
-     margin-top: 60px;
+    margin-top: 60px;
 
     .row .col:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.focus-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+
+  @media (max-width: $global-toc-break) {
+    display: none;
+  }
+
+  .text {
+    margin-left: 16px;
+  }
+
+  #focus-toggle {
+    position: relative;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:checked {
+      background: #6aa84f;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+      transition: 0.4s;
+    }
+
+    &:checked::after {
+      left: 20px;
     }
   }
 }

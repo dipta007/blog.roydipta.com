@@ -32,6 +32,8 @@
   --tr-color: var(--light-gray);
 
   --syntax-highlighting-background: #f3f7ff;
+
+  --toc-highlight: var(--brand-color);
 }
 
 :root[dark] {
@@ -63,4 +65,6 @@
   --tr-color: #080b12;
 
   --syntax-highlighting-background: #1a1a1f;
+
+  --toc-highlight: var(--brand-color);
 }

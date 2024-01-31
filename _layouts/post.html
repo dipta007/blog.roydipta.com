@@ -53,6 +53,11 @@ layout: default
             </div>
           </div>
 
+          <div class="focus-container">
+            <input type="checkbox" id="focus-toggle" onchange="toggleFocusMode()">
+            <span class="text">Focus Mode</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -64,10 +69,7 @@ layout: default
 
   <div class="row">
 
-    <!-- Post Share -->
-    <div class="col-md-2 pl-0 d-sm-none d-md-block">
-      {% include share.html %}
-    </div>
+    {% include sidebar-left.html %}
     <article class="post">
 
       <div class="post__content">

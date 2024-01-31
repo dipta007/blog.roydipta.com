@@ -1,0 +1,19 @@
+<!-- Post Share -->
+<!-- <div class="col-4" id="sidebar-left">
+</div> -->
+<div style="display: flex; max-width: calc(3/12*100%);" id="sidebar-left">
+    <div class="col-3">
+        {% include toc-side.html %}
+    </div>
+    <div class="col-1">
+        {% include share-side.html %}
+    </div>
+</div>
+
+<script>
+    const toggleFocusMode = () => {
+        const sidebar = document.getElementById('sidebar-left');
+        const focusMode = document.getElementById('focus-toggle');
+        focusMode.checked ? sidebar.style.display = 'none' : sidebar.style.display = 'flex';
+    }
+</script>
