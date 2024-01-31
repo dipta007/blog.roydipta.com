@@ -6,7 +6,7 @@
 <body>
 
   {% if site.google-analytics %}
-    {% include google-analytics.html %}
+    {% include scripts/google-analytics.html %}
   {% endif %}
 
   {% include header.html %}
@@ -37,6 +37,11 @@
 
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
   <script src="{{ site.baseurl }}/js/common.js"></script>
+
+  {% if site.progressbar %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    {% include scripts/progress-bar.html %}
+  {% endif %}
 </body>
 
 </html>

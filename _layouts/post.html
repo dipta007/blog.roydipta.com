@@ -127,3 +127,14 @@ layout: default
 <!-- Begin Related Posts -->
 {% include related-posts.html %}
 <!-- End Related Posts -->
+
+
+<!-- Begin Progress Bar -->
+{% if site.progressbar %}
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+{%- endif %}

@@ -48,6 +48,10 @@ mailchimp:
   input__text: Subscribe here
   button__text: Send Me New posts
 
+#-------------------------------
+# Miscellaneous
+progressbar: true # Enable or disable the progress bar at the top of the page
+
 
 #-------------------------------
 # Gallery Footer Section
