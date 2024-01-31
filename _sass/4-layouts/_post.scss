@@ -1,7 +1,7 @@
 /* Post + Page */
 .post-head,
 .page-head {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
 
   .row {
     align-items: center;
@@ -433,8 +433,7 @@
     }
   }
 }
-
-.focus-container {
+#focus-container {
   display: flex;
   align-items: center;
   margin-top: 2em;

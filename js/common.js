@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function darkMode() {
     if (html.classList.contains('dark-mode')) {
       html.classList.remove('dark-mode');
-      localStorage.removeItem("theme");
+      localStorage.setItem("theme", "light");
       document.documentElement.removeAttribute("dark");
     } else {
       html.classList.add('dark-mode');
@@ -152,4 +152,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  /* =======================
+  // Focus Mode show or not
+  ======================= */
+  const leftSidebars = document.querySelectorAll(".sidebar-left");
+  console.log(leftSidebars.length);
+  if (leftSidebars.length > 0) {
+    document.getElementById("focus-container").style.display = "block";
+  }
 });

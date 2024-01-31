@@ -1,19 +1,21 @@
 <!-- Post Share -->
-<!-- <div class="col-4" id="sidebar-left">
+
+{% include toc-side.html %}
+<!-- <div class="col-1 sidebar-left">
+    {% include share-side.html %}
 </div> -->
-<div style="display: flex; max-width: calc(3/12*100%);" id="sidebar-left">
-    <div class="col-3">
-        {% include toc-side.html %}
-    </div>
-    <div class="col-1">
-        {% include share-side.html %}
-    </div>
-</div>
 
 <script>
     const toggleFocusMode = () => {
-        const sidebar = document.getElementById('sidebar-left');
         const focusMode = document.getElementById('focus-toggle');
-        focusMode.checked ? sidebar.style.display = 'none' : sidebar.style.display = 'flex';
+        let display = "block";
+        if (focusMode.checked) {
+            display = "none";
+        }
+
+        const leftSidebars = document.getElementsByClassName('sidebar-left');
+        for (let i = 0; i < leftSidebars.length; i++) {
+            leftSidebars[i].style.display = display;
+        }
     }
 </script>
