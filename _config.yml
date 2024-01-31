@@ -4,7 +4,7 @@ title: Shubhashis Roy Dipta Blog
 logo: # You can add own logo. For example '/images/logo.png'.
 description: A blog on Machine Learning, NLP, Vision, Multimodal AI
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dipta007.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.roydipta.com" # the base hostname & protocol for your site, e.g. http://example.com
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 toc: true # Table of Contents
 
@@ -122,6 +122,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-target-blank
 
 paginate: 9
 paginate_path: "/page/:num"
