@@ -30,6 +30,7 @@
     const slider = document.querySelector('.slider-items');
     const leftArrow = document.querySelectorAll('.slider__arrow')[0];
     const rightArrow = document.querySelectorAll('.slider__arrow')[1];
+    let drag = 0
 
     const end = () => {
         isDown = false;
@@ -37,6 +38,9 @@
     }
 
     const start = (e) => {
+        e.preventDefault();
+        drag = 0;
+
         isDown = true;
         slider.classList.add('active');
         startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
@@ -46,9 +50,10 @@
     }
 
     const move = (e) => {
+        e.preventDefault();
         if (!isDown) return;
 
-        e.preventDefault();
+        drag += 1;
         const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
         const dist = (x - startX);
         slider.scrollLeft = scrollLeft - dist;
@@ -66,6 +71,14 @@
         slider.addEventListener('mouseleave', end);
         slider.addEventListener('mouseup', end);
         slider.addEventListener('touchend', end);
+
+        slider.addEventListener('click', (e) => {
+            console.log("click", drag);
+            if (drag > 4) {
+                e.preventDefault();
+                return;
+            }
+        });
     })();
 
     const checkDisabled = () => {
