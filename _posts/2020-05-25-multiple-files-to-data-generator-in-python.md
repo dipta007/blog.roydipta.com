@@ -7,6 +7,7 @@ image: https://i.imgur.com/LKmuYnL.jpg
 date: 2020-05-25  
 tags: [data-science, python, programming]  
 share: true  
+featured: true  
 ---  
   
 In the current era of Deep Learning, Data is the biggest problem. If the data size is small, then it's obviously a big problem for training a Deep Neural Network. Even if the data size is huge, then it's also a big problem for the people who don't have enough resources.  
