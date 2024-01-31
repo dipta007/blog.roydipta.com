@@ -28,11 +28,6 @@
 .section__title {
   padding-right: 20px;
   margin-bottom: 0;
-  font-size: 28px;
-
-  @media only screen and (max-width: $mobile) {
-    font-size: 24px;
-  }
 }
 
 .section__link {
