@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: LightOJ Code Downloader  
 description: Download all codes in one click...  
