@@ -1,4 +1,5 @@
 ---  
+toc: true  
 layout: post  
 title: Multiple Files To Data Generator - Less RAM, Fast Training  
 description: In the current era of Deep Learning, Data is the biggest problem. If the data size is small, then it's obviously a big problem...  
