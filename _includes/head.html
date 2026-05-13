@@ -9,15 +9,23 @@
   <!-- Favicon -->
   {% include_cached favicons.html %}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- Resource hints: preconnect for stylesheets in the critical path,
+       dns-prefetch for things loaded later in the body (jQuery, GA). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Fonts (render-blocking — text rendering is critical) -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-
-  <!-- Ionicons -->
-  <link rel="preload" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" as="style">
-  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- Ionicons (deferred — only used for icon glyphs in the social row / footer;
+       acceptable brief FOUT on icons, large win on FCP because this is a
+       cross-origin render-blocking stylesheet on every page). -->
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css"></noscript>
 
   <!-- Theme -->
   <script>

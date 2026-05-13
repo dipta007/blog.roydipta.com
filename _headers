@@ -1,15 +1,27 @@
 # Cloudflare Workers Assets / Pages headers file.
 # Format: https://developers.cloudflare.com/pages/configuration/headers/
 #
-# /assets/ + /images/ + /js/ are content-addressable enough (or rarely change)
-# that we can cache them aggressively. If you start mutating files in place
-# without renaming them, drop `immutable` and pick a shorter max-age.
+# Cache strategy: blog filenames are NOT content-hashed, so `immutable` is
+# only safe for paths whose contents truly never change (e.g. favicons).
+# Everything else uses a finite TTL with revalidation so a replaced asset
+# eventually reaches returning visitors.
 
-/assets/*
+# Favicons / manifest — content never changes (or path changes with it)
+/images/favicons/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Post images — give a month, revalidate quietly in the background
 /images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
+# Site-level JS (scripts.js, common.js) — may be edited; 1 day with revalidation
 /js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Bundled minified JS — same treatment
+/assets/js/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Catch-all for /assets/ — 1 day
+/assets/*
+  Cache-Control: public, max-age=86400
