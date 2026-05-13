@@ -6,11 +6,10 @@
 # Everything else uses a finite TTL with revalidation so a replaced asset
 # eventually reaches returning visitors.
 
-# Favicons / manifest — content never changes (or path changes with it)
-/images/favicons/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Post images — give a month, revalidate quietly in the background
+# All images (incl. favicons) — 30d cache, quiet background revalidation.
+# Note: a separate `/images/favicons/*` immutable rule would be ideal, but
+# Cloudflare's `*` glob matches across slashes, so both rules fire and the
+# Cache-Control values get concatenated. 30d is plenty for favicons too.
 /images/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
