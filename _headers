@@ -17,10 +17,8 @@
 /js/*
   Cache-Control: public, max-age=86400, must-revalidate
 
-# Bundled minified JS — same treatment
-/assets/js/*
-  Cache-Control: public, max-age=86400, must-revalidate
-
-# Catch-all for /assets/ — 1 day
+# Everything under /assets/ (only js/dist/* exists today) — 1d revalidate.
+# Single rule because Cloudflare's `*` matches across slashes, so a separate
+# /assets/js/* rule would just concatenate with this one.
 /assets/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=86400, must-revalidate
