@@ -1,0 +1,10 @@
+# Cloudflare Workers Assets — serves the Jekyll-built `_site/` directory as a
+# pure static site. No worker script needed when assets are the only content.
+# See: https://developers.cloudflare.com/workers/static-assets/
+
+name = "blog-roydipta"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./_site"
+not_found_handling = "404-page"

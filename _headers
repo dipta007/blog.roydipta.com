@@ -1,0 +1,15 @@
+# Cloudflare Workers Assets / Pages headers file.
+# Format: https://developers.cloudflare.com/pages/configuration/headers/
+#
+# /assets/ + /images/ + /js/ are content-addressable enough (or rarely change)
+# that we can cache them aggressively. If you start mutating files in place
+# without renaming them, drop `immutable` and pick a shorter max-age.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable

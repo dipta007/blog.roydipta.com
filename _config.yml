@@ -141,6 +141,7 @@ defaults:
 
 include:
   - _pages
+  - _headers  # Cloudflare cache rules — Jekyll skips _-prefixed files unless listed here
 
 sass:
   sass_dir: _sass
