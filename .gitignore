@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 .DS_Store
 .obsidian
+# wrangler dev local state
+.wrangler/

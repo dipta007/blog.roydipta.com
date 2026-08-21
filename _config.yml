@@ -142,6 +142,7 @@ defaults:
 include:
   - _pages
   - _headers  # Cloudflare cache rules — Jekyll skips _-prefixed files unless listed here
+  - _redirects  # 301s to roydipta.com/blog — same underscore rule, must be listed or it never ships
 
 sass:
   sass_dir: _sass
