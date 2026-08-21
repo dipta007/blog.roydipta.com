@@ -46,8 +46,17 @@
 # --- non-post pages ----------------------------------------------------------
 /about.html                                          https://roydipta.com/                                                       301
 
-# --- deliberately NOT a catch-all --------------------------------------------
-# No `/*  https://roydipta.com/blog/  301` line. The old sitemap still lists
-# junk (/asdasd/, /elements/), and a splat would turn every stale URL into a
-# soft 404 instead of an honest one. Unmatched paths fall through to the 404
-# page configured by not_found_handling in wrangler.toml.
+# --- let crawlers keep reading these during the move -------------------------
+# Status 200 = serve in place, no redirect. These must stay readable so search
+# engines can recrawl the old URLs and discover the 301s above. Listed BEFORE
+# the catch-all, because _redirects is first-match-wins in file order.
+/robots.txt   /robots.txt   200
+/sitemap.xml  /sitemap.xml  200
+
+# --- everything else ---------------------------------------------------------
+# Anything with no counterpart goes to the main site's not-found page. That URL
+# genuinely returns 404, so this is NOT a soft 404: a visitor gets a branded
+# page instead of a dead subdomain, and a crawler still sees a 404 and drops
+# the URL. Sending them to /blog/ instead WOULD be a soft 404, which is why
+# the target is /not-found and not the blog index.
+/*  https://roydipta.com/not-found  301
