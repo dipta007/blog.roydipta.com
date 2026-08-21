@@ -1,62 +1,64 @@
-# Cloudflare Workers Assets / Pages redirects file.
+# Cloudflare Workers Assets redirects.
 # Format: https://developers.cloudflare.com/pages/configuration/redirects/
 #
-# The blog moved to roydipta.com/blog/. This deployment now exists only to 301
-# the old URLs there, so link equity and bookmarks survive the move.
+# The blog moved to roydipta.com/blog/. This deployment exists only to 301 the old
+# URLs there, so bookmarks and link equity survive. It must STAY UP: it is the thing
+# serving the redirects. Keep it at least a year.
 #
-# Three things that matter here, learned the hard way about site moves:
+# Why every line below is a plain 301 with a literal path:
 #
-#   1. 301, not 302. Only a permanent redirect passes ranking signals.
-#   2. Each URL maps to its OWN counterpart. A blanket redirect to the new
-#      homepage is treated as a soft 404 and throws away the signal entirely,
-#      which would defeat the point of doing this at all.
-#   3. This deployment must STAY UP. It is the thing serving the redirects.
-#      Keep it for at least a year; it is free, so really just keep it.
+#   - `200` rewrites (`/sitemap.xml  /sitemap.xml  200`) are a Cloudflare PAGES
+#     feature. On Workers Static Assets they are ignored, and the catch-all then
+#     swallowed the URL instead. Verified on production, not assumed.
+#   - `:placeholder` rules (`/page/:num`) also lost to the catch-all here, so the
+#     two real pagination paths are listed literally.
+#   - `wrangler dev` does NOT reproduce production precedence. It passed all of the
+#     above locally while production disagreed. Verify redirects against the
+#     deployed site, never only against the dev server.
 #
-# Matching is case-sensitive, and three of the old URLs carry capitals, so the
-# lowercase variants are listed too. Inbound links and shares get case-mangled.
+# 301 and not 302: only a permanent redirect passes ranking signals.
+# Each URL maps to its OWN counterpart: a blanket redirect to one page is read as a
+# soft 404, which would throw the signal away.
+#
+# Matching is case-sensitive and three old URLs carry capitals, so the lowercase
+# variants are listed too.
 
 # --- posts -------------------------------------------------------------------
-/flask-1                                             https://roydipta.com/blog/2018/flask-1/                                     301
-/flask-2                                             https://roydipta.com/blog/2018/flask-2/                                     301
+/flask-1  https://roydipta.com/blog/2018/flask-1/  301
+/flask-2  https://roydipta.com/blog/2018/flask-2/  301
+/SPOJ-code-downloader  https://roydipta.com/blog/2018/spoj-code-downloader/  301
+/spoj-code-downloader  https://roydipta.com/blog/2018/spoj-code-downloader/  301
+/LightOJ-code-downloader  https://roydipta.com/blog/2018/lightoj-code-downloader/  301
+/lightoj-code-downloader  https://roydipta.com/blog/2018/lightoj-code-downloader/  301
+/gogole-compute-machine-learning  https://roydipta.com/blog/2018/google-compute-machine-learning/  301
+/google-compute-machine-learning  https://roydipta.com/blog/2018/google-compute-machine-learning/  301
+/How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days  https://roydipta.com/blog/2020/gre-quant-170/  301
+/how-i-cracked-170-170-on-gre-quant-in-just-37-days  https://roydipta.com/blog/2020/gre-quant-170/  301
+/top-4-productivity-tools-for-daily-life  https://roydipta.com/blog/2020/top-4-productivity-tools-for-daily-life/  301
+/multiple-files-to-data-generator-in-python  https://roydipta.com/blog/2020/multiple-files-to-data-generator-in-python/  301
+/clean-code-functions  https://roydipta.com/blog/2020/clean-code-functions/  301
+/clean-code-naming  https://roydipta.com/blog/2020/clean-code-naming/  301
 
-/SPOJ-code-downloader                                https://roydipta.com/blog/2018/spoj-code-downloader/                        301
-/spoj-code-downloader                                https://roydipta.com/blog/2018/spoj-code-downloader/                        301
-
-/LightOJ-code-downloader                             https://roydipta.com/blog/2018/lightoj-code-downloader/                     301
-/lightoj-code-downloader                             https://roydipta.com/blog/2018/lightoj-code-downloader/                     301
-
-# the old filename had a typo, "gogole"; keep redirecting it, it is a real URL
-/gogole-compute-machine-learning                     https://roydipta.com/blog/2018/google-compute-machine-learning/             301
-/google-compute-machine-learning                     https://roydipta.com/blog/2018/google-compute-machine-learning/             301
-
-/How-I-Cracked-170-170-On-GRE-Quant-In-Just-37-Days  https://roydipta.com/blog/2020/gre-quant-170/                               301
-/how-i-cracked-170-170-on-gre-quant-in-just-37-days  https://roydipta.com/blog/2020/gre-quant-170/                               301
-
-/top-4-productivity-tools-for-daily-life             https://roydipta.com/blog/2020/top-4-productivity-tools-for-daily-life/     301
-/multiple-files-to-data-generator-in-python          https://roydipta.com/blog/2020/multiple-files-to-data-generator-in-python/  301
-/clean-code-functions                                https://roydipta.com/blog/2020/clean-code-functions/                        301
-/clean-code-naming                                   https://roydipta.com/blog/2020/clean-code-naming/                           301
-
-# --- index, listings, pagination ---------------------------------------------
-/                                                    https://roydipta.com/blog/                                                  301
-/tags/                                               https://roydipta.com/blog/                                                  301
-/page/:num                                           https://roydipta.com/blog/                                                  301
+# --- index, listing, pagination ----------------------------------------------
+# 10 posts at 12 per page means page 2 never existed, but /page/1 was reachable.
+/  https://roydipta.com/blog/  301
+/tags/  https://roydipta.com/blog/  301
+/page/1  https://roydipta.com/blog/  301
+/page/2  https://roydipta.com/blog/  301
 
 # --- non-post pages ----------------------------------------------------------
-/about.html                                          https://roydipta.com/                                                       301
+/about.html  https://roydipta.com/  301
+/about  https://roydipta.com/  301
 
-# --- let crawlers keep reading these during the move -------------------------
-# Status 200 = serve in place, no redirect. These must stay readable so search
-# engines can recrawl the old URLs and discover the 301s above. Listed BEFORE
-# the catch-all, because _redirects is first-match-wins in file order.
-/robots.txt   /robots.txt   200
-/sitemap.xml  /sitemap.xml  200
+# --- crawler files -----------------------------------------------------------
+# Point crawlers at the new equivalents rather than trying to serve the stale ones
+# in place. A 301 works here where a 200 rewrite silently did not.
+/robots.txt  https://roydipta.com/robots.txt  301
+/sitemap.xml  https://roydipta.com/sitemap.xml  301
+/feed.xml  https://roydipta.com/feed.xml  301
 
 # --- everything else ---------------------------------------------------------
 # Anything with no counterpart goes to the main site's not-found page. That URL
-# genuinely returns 404, so this is NOT a soft 404: a visitor gets a branded
-# page instead of a dead subdomain, and a crawler still sees a 404 and drops
-# the URL. Sending them to /blog/ instead WOULD be a soft 404, which is why
-# the target is /not-found and not the blog index.
+# genuinely returns 404, so this is NOT a soft 404: a visitor gets a branded page
+# and a crawler still sees a 404 and drops the URL. Must stay last.
 /*  https://roydipta.com/not-found  301
